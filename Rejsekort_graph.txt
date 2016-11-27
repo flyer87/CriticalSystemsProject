@@ -1,0 +1,66 @@
+"give consent for Opinion-research institutes" -->% "Block Opinion-research institutes"
+"Block Opinion-research institutes" -->* "Block Opinion-research institutes"
+"Block Opinion-research institutes" -->* "request from opinion research institute"
+"request from opinion research institute" -->* "send data to Opinion-research institutes"
+"give consent for Opinion-research institutes" *--> Register
+"withdraw consent Op Res" -->+ "Block Opinion-research institutes"
+
+"give consent for M Purposes" -->*Register
+"give consent for M Purposes" -->%"block M Purposes"
+"block M Purposes"-->* "block M Purposes"
+Register -->+"Data breach"
+
+Register -->+ "Terminate relationship"
+
+
+"Terminate relationship" *-[5]-> "Delete identity"
+"Terminate relationship" -[5]->* "Delete identity"
+
+Register -->+ "get assistance from the company"
+Register -->+ "get machine readable format"
+Register -->+ "right to be forgotten"
+
+%"Data breach"{
+/("Notify Authority" "Notify data subject" StartCleanup)
+"Data breach"*-->"StartCleanup"-->%"StartCleanup"
+"StartCleanup"*-->"Asses the risk"
+%"High risk"
+%"Notify data subject"
+"Asses the risk" -->+"High risk"
+"Asses the risk" -->* "Notify Authority"
+"Asses the risk" *-[3]-> "Notify Authority"
+"High risk"-->+"Notify data subject"
+"High risk" -->* "Notify data subject"
+}
+
+#"Data breach" -->* Notify
+
+Register -->+ "blocking request"
+
+"blocking request" *--> "block"
+
+Register -->+ "request for information modification"
+
+"request for information modification" -->* "modify information" 
+
+Register -->+ "withdraw consent"
+"withdraw consent" -->+ "block M Purposes"
+
+#Register -->+ reload
+GROUP "mandatory"{
+reload
+"Nets A/S"
+Manufacture
+ "send data to partner"
+}
+#Register -->*"reload"
+reload *--> "Nets A/S"
+
+Register -->* "mandatory"
+"block M Purposes"-->* "mandatory"
+
+#Register -->* Manufacture
+#"block M Purposes"-->*Manufacture
+
+#Register -->* "send data to partner"
+#"block M Purposes"-->*"send data to partner"
