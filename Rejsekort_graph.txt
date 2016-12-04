@@ -8,11 +8,8 @@
 "give consent for M Purposes" -->*Register
 "give consent for M Purposes" -->%"block M Purposes"
 "block M Purposes"-->* "block M Purposes"
-Register -->+"Data breach"
 
 Register -->+ "Terminate relationship"
-
-
 "Terminate relationship" *-[5]-> "Delete identity"
 "Terminate relationship" -[5]->* "Delete identity"
 
@@ -20,6 +17,7 @@ Register -->+ "get assistance from the company"
 Register -->+ "get machine readable format"
 Register -->+ "right to be forgotten"
 
+Register -->+"Data breach"
 %"Data breach"{
 /("Notify Authority" "Notify data subject" StartCleanup)
 "Data breach"*-->"StartCleanup"-->%"StartCleanup"
@@ -33,13 +31,10 @@ Register -->+ "right to be forgotten"
 "High risk" -->* "Notify data subject"
 }
 
-
 Register -->+ "blocking request"
-
 "blocking request" *--> "block"
 
 Register -->+ "request for information modification"
-
 "request for information modification" -->* "modify information" 
 
 Register -->+ "withdraw consent"
