@@ -33,7 +33,6 @@ Register -->+ "right to be forgotten"
 "High risk" -->* "Notify data subject"
 }
 
-#"Data breach" -->* Notify
 
 Register -->+ "blocking request"
 
@@ -46,21 +45,14 @@ Register -->+ "request for information modification"
 Register -->+ "withdraw consent"
 "withdraw consent" -->+ "block M Purposes"
 
-#Register -->+ reload
 GROUP "mandatory"{
 reload
 "Nets A/S"
 Manufacture
  "send data to partner"
 }
-#Register -->*"reload"
+
 reload *--> "Nets A/S"
 
 Register -->* "mandatory"
 "block M Purposes"-->* "mandatory"
-
-#Register -->* Manufacture
-#"block M Purposes"-->*Manufacture
-
-#Register -->* "send data to partner"
-#"block M Purposes"-->*"send data to partner"
