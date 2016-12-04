@@ -1,21 +1,21 @@
-"give consent for Opinion-research institutes" -->% "Block Opinion-research institutes"
+"Give consent for Opinion-research institutes" -->% "Block Opinion-research institutes"
 "Block Opinion-research institutes" -->* "Block Opinion-research institutes"
-"Block Opinion-research institutes" -->* "request from opinion research institute"
-"request from opinion research institute" -->* "send data to Opinion-research institutes"
-"give consent for Opinion-research institutes" *--> Register
-"withdraw consent Op Res" -->+ "Block Opinion-research institutes"
+"Block Opinion-research institutes" -->* "Request from Opinion-research institutes"
+"Request from Opinion-research institutes" -->* "Send data to Opinion-research institutes"
+"Give consent for Opinion-research institutes" *--> Register
+"Withdraw consent for Opinion-research institutes" -->+ "Block Opinion-research institutes"
 
-"give consent for M Purposes" -->*Register
-"give consent for M Purposes" -->%"block M Purposes"
-"block M Purposes"-->* "block M Purposes"
+"Give consent for main purposes" -->*Register
+"Give consent for main purposes" -->%"Block main purposes"
+"Block main purposes"-->* "Block main purposes"
 
 Register -->+ "Terminate relationship"
 "Terminate relationship" *-[5]-> "Delete identity"
 "Terminate relationship" -[5]->* "Delete identity"
 
-Register -->+ "get assistance from the company"
-Register -->+ "get machine readable format"
-Register -->+ "right to be forgotten"
+Register -->+ "Get assistance from the company"
+Register -->+ "Get machine readable format"
+Register -->+ "Right to be forgotten"
 
 Register -->+"Data breach"
 %"Data breach"{
@@ -31,23 +31,23 @@ Register -->+"Data breach"
 "High risk" -->* "Notify data subject"
 }
 
-Register -->+ "blocking request"
-"blocking request" *--> "block"
+Register -->+ "Blocking request"
+"Blocking request" *--> "Block"
 
-Register -->+ "request for information modification"
-"request for information modification" -->* "modify information" 
+Register -->+ "Request for information modification"
+"Request for information modification" -->* "Modify information" 
 
-Register -->+ "withdraw consent"
-"withdraw consent" -->+ "block M Purposes"
+Register -->+ "Withdraw consent for main purposes"
+"Withdraw consent for main purposes" -->+ "Block main purposes"
 
-GROUP "mandatory"{
-reload
+GROUP "Mandatory"{
+Reload
 "Nets A/S"
 Manufacture
- "send data to partner"
+"Send data to partner"
 }
 
-reload *--> "Nets A/S"
+Reload *--> "Nets A/S"
 
-Register -->* "mandatory"
-"block M Purposes"-->* "mandatory"
+Register -->* "Mandatory"
+"Block main purposes"-->* "Mandatory"
