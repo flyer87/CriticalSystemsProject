@@ -10,10 +10,10 @@
 "Block main purposes"-->* "Block main purposes"
 
 Register -->+ "Terminate relationship"
-"Terminate relationship" *-[5]-> "Delete identity"
-"Terminate relationship" -[5]->* "Delete identity"
+"Terminate relationship" *-[1825]-> "Delete identity"
+"Terminate relationship" -[1825]->* "Delete identity"
 
-Register -->+ "Get assistance from the company"
+Register -->+ %"Get assistance from the company"
 Register -->+ "Get machine readable format"
 Register -->+ "Right to be forgotten"
 
@@ -37,8 +37,8 @@ Register -->+ "Blocking request"
 Register -->+ "Request for information modification"
 "Request for information modification" -->* "Modify information" 
 
-Register -->+ "Withdraw consent for main purposes"
-"Withdraw consent for main purposes" -->+ "Block main purposes"
+"Give consent for main purposes" -->+ "Withdraw consent for main purposes"
+%"Withdraw consent for main purposes" -->+ "Block main purposes"
 
 GROUP "Mandatory"{
 Reload
