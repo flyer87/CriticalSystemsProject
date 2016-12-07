@@ -9,7 +9,7 @@
 "Give consent for main purposes" -->%"Block main purposes"
 "Block main purposes"-->* "Block main purposes"
 
-Register -->+ "Terminate relationship"
+Register -->+ %"Terminate relationship"
 "Terminate relationship" *-[1825]-> "Delete identity"
 "Terminate relationship" -[1825]->* "Delete identity"
 
@@ -37,7 +37,7 @@ Register -->+ "Blocking request"
 Register -->+ "Request for information modification"
 "Request for information modification" -->* "Modify information" 
 
-"Give consent for main purposes" -->+ "Withdraw consent for main purposes"
+Register -->+ "Withdraw consent for main purposes"
 %"Withdraw consent for main purposes" -->+ "Block main purposes"
 
 GROUP "Mandatory"{
