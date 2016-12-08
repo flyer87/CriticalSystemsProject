@@ -9,9 +9,12 @@
 "Give consent for main purposes" -->%"Block main purposes"
 "Block main purposes"-->* "Block main purposes"
 
-Register -->+ %"Terminate relationship"
-"Terminate relationship" *-[1825]-> "Delete identity"
+GROUP "Terminate" {
+%"Terminate relationship"*-[1825]-> %"Delete identity"
 "Terminate relationship" -[1825]->* "Delete identity"
+}
+Register -->+ %"Terminate"
+
 
 Register -->+ %"Get assistance from the company"
 Register -->+ "Get machine readable format"
