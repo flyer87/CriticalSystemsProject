@@ -8,7 +8,7 @@
 "Give consent for main purposes" -->*Register
 "Give consent for main purposes" -->%"Block main purposes"
 "Block main purposes"-->* "Block main purposes"
-
+	
 GROUP "Terminate" {
 %"Terminate relationship"*-[1825]-> %"Delete identity"
 "Terminate relationship" -[1825]->* "Delete identity"
@@ -34,7 +34,7 @@ Register -->+"Data breach"
 "High risk" -->* "Notify data subject"
 }
 
-Register -->+ "Blocking request"
+Register -->+ %"Blocking request"
 "Blocking request" *--> "Block"
 
 Register -->+ "Request for information modification"
