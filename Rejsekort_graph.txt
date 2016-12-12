@@ -17,12 +17,12 @@ Register -->+ %"Terminate"
 
 
 Register -->+ %"Get assistance from the company"
-Register -->+ "Get machine readable format"
-Register -->+ "Right to be forgotten"
+Register -->+ %"Get machine readable format"
+Register -->+ %"Right to be forgotten"
 
 Register -->+"Data breach"
 %"Data breach"{
-/("Notify Authority" "Notify data subject" StartCleanup)
+/("Notify Authority" "Notify data subject" StartCleanup "Asses the risk" "High risk")
 "Data breach"*-->"StartCleanup"-->%"StartCleanup"
 "StartCleanup"*-->"Asses the risk"
 %"High risk"
@@ -37,7 +37,7 @@ Register -->+"Data breach"
 Register -->+ %"Blocking request"
 "Blocking request" *--> "Block"
 
-Register -->+ "Request for information modification"
+Register -->+ %"Request for information modification"
 "Request for information modification" -->* "Modify information" 
 
 Register -->+ "Withdraw consent for main purposes"
