@@ -22,14 +22,14 @@ Register -->+ "Right to be forgotten"
 
 Register -->+"Data breach"
 %"Data breach"{
-/("Notify Authority" "Notify data subject" StartCleanup)
-"Data breach"*-->"StartCleanup"-->%"StartCleanup"
-"StartCleanup"*-->"Asses the risk"
+/("Notify Authority" "Notify data subject" StartNotification "Asses the risk" "High risk")
+"Data breach"*--> "Asses the risk" #"StartNotification"-->%"StartNotification"
+"Asses the risk" *--> "StartNotification"-->%"StartNotification"
 %"High risk"
 %"Notify data subject"
 "Asses the risk" -->+"High risk"
-"Asses the risk" -->* "Notify Authority"
-"Asses the risk" *-[3]-> "Notify Authority"
+"StartNotification" -->* "Notify Authority"
+"StartNotification" *-[3]-> "Notify Authority"
 "High risk"-->+"Notify data subject"
 "High risk" -->* "Notify data subject"
 }
