@@ -17,14 +17,14 @@ Register -->+ %"Terminate"
 
 
 Register -->+ %"Get assistance from the company"
-Register -->+ "Get machine readable format"
-Register -->+ "Right to be forgotten"
+Register -->+ %"Get machine readable format"
+Register -->+ %"Right to be forgotten"
 
 Register -->+"Data breach"
 %"Data breach"{
 /("Notify Authority" "Notify data subject" StartNotification "Asses the risk" "High risk")
-"Data breach"*--> "Asses the risk" #"StartNotification"-->%"StartNotification"
-"Asses the risk" *--> "StartNotification"-->%"StartNotification"
+"Data breach"*-->"StartNotification"-->%"StartNotification"
+"StartNotification"*-->"Asses the risk"
 %"High risk"
 %"Notify data subject"
 "Asses the risk" -->+"High risk"
@@ -37,7 +37,7 @@ Register -->+"Data breach"
 Register -->+ %"Blocking request"
 "Blocking request" *--> "Block"
 
-Register -->+ "Request for information modification"
+Register -->+ %"Request for information modification"
 "Request for information modification" -->* "Modify information" 
 
 Register -->+ "Withdraw consent for main purposes"
