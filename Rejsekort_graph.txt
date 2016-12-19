@@ -1,7 +1,6 @@
 "Give consent for Opinion-research institutes" -->% "Block Opinion-research institutes"
 "Block Opinion-research institutes" -->* "Block Opinion-research institutes"
 "Block Opinion-research institutes" -->* "Send data to Opinion-research institutes"
-"Give consent for Opinion-research institutes" *--> Register
 "Withdraw consent for Opinion-research institutes" -->+ "Block Opinion-research institutes"
 
 "Give consent for main purposes" -->*Register
